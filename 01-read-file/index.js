@@ -1,2 +1,12 @@
-Добрый день. Пожалуйста, проверьте мою работу в среду. не успела сделать вовремя:(
-Заранее спасибо
+const fs = require('fs');
+
+const path = require('path');
+
+const rs = fs.createReadStream(path.join(__dirname, 'text.txt'), 'utf-8');
+
+rs.on('data', (chunk) => {
+  console.log(chunk);
+});
+
+
+
